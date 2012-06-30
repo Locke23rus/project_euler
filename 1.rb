@@ -1,7 +1,6 @@
-sum = 0
-
-(1...1000).each do |i|
-  sum += i if (i % 3).zero? || (i % 5).zero?
-end
+range = 0...1000
+numbers = (range.step(3).to_a + range.step(5).to_a).uniq
+sum = numbers.uniq.reduce(:+)
 
 puts sum
+
