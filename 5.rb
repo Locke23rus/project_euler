@@ -1,10 +1,8 @@
 target = step = 2520
 
 (11...20).each do |i|
-  unless (target % i).zero?
-    while (target % i) != 0
-      target += step
-    end
+  if (target % i).nonzero?
+    target += step while (target % i).nonzero?
     step = target
   end
 end
