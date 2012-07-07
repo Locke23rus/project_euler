@@ -30,8 +30,8 @@ max = 0
   end
 end
 
-0.upto 19 do |i|
-  0.upto 15 do |j|
+0.upto 15 do |j|
+  0.upto 19 do |i|
     produce = a[j][i] * a[j+1][i] * a[j+2][i] * a[j+3][i]
     max = produce if produce > max
   end
@@ -43,7 +43,7 @@ end
     max = produce if produce > max
   end
 end
-#
+
 3.upto 15 do |i|
   3.upto 15 do |j|
     produce = a[j][i] * a[j+1][i-1] * a[j+2][i-2] * a[j+3][i-3]
@@ -51,8 +51,4 @@ end
   end
 end
 
-
-
-
 puts max
-
